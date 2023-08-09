@@ -24,7 +24,7 @@ jobs:
         source-url: https://nuget.pkg.github.com/glensouza/index.json
       env:
         NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-    - run: dotnet build GitHubTest.Lib
+    - run: dotnet build GitHubTest.Lib --configuration Release
     - name: Create the package
       run: dotnet pack --configuration Release GitHubTest.Lib
     - name: Publish the package to GPR
