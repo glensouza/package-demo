@@ -3,6 +3,11 @@ name: Node.js Package
 on:
   push:
     branches: [ "main" ]
+    paths:  
+      - '.github/workflows/release_package.yml'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'index.js'
 
 jobs:
   build:

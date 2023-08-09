@@ -3,6 +3,9 @@ name: Docker
 on:
   push:
     branches: [ "main" ]
+    paths:  
+      - '.github/workflows/docker-publish.yml'
+      - 'PackageGS/**'
 
 env:
   # Use docker.io for Docker Hub if empty
