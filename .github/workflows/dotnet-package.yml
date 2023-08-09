@@ -14,7 +14,7 @@ on:
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     permissions:
         packages: write
         contents: read
@@ -33,4 +33,4 @@ jobs:
     - name: Set API Key
       run: nuget setApiKey ${{secrets.GITHUB_TOKEN}} -Source https://nuget.pkg.github.com/glensouza/index.json
     - name: Publish the package to GPR
-      run: dotnet nuget push GitHubTest.Lib/bin/Release/*.nupkg
+      run: dotnet nuget push ./GitHubTest.Lib/bin/Release/*.nupkg
