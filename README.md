@@ -21,3 +21,9 @@ The workflow file is located at `.github/workflows/node-package.yml`.
 The containerized application is a simple ASP.NET Core web application. The code is located in the `PackageGS` directory.
 
 The workflow file is located at `.github/workflows/docker-package.yml`.
+
+## Releases
+
+The release is a .zip file containing the packaged Node.js code.
+
+The release is located in the root folder as filename `package-1.0.zip`.
