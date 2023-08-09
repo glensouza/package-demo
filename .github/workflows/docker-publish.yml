@@ -6,6 +6,7 @@ on:
     paths:  
       - '.github/workflows/docker-publish.yml'
       - 'PackageGS/**'
+  workflow_dispatch:
 
 env:
   # Use docker.io for Docker Hub if empty
