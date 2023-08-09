@@ -4,7 +4,7 @@ on:
   push:
     branches: [ "main" ]
     paths:  
-      - '.github/workflows/release_package.yml'
+      - '.github/workflows/node-package.yml'
       - 'package.json'
       - 'package-lock.json'
       - 'index.js'
