@@ -30,5 +30,7 @@ jobs:
     - run: dotnet build --configuration Release GitHubTest.Lib
     - name: Create the package
       run: dotnet pack --configuration Release GitHubTest.Lib
+    - name: Set API Key
+      run: nuget setApiKey ${{secrets.GITHUB_TOKEN}} -Source https://nuget.pkg.github.com/glensouza/index.json
     - name: Publish the package to GPR
-      run: dotnet nuget push ./GitHubTest.Lib/bin/Release/*.nupkg
+      run: dotnet nuget push GitHubTest.Lib/bin/Release/*.nupkg
